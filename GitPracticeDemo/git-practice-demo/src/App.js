@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          Just Demo Git Project
+          Just Demo Git Project 
         </header>
       </div>
     );
