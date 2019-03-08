@@ -1,0 +1,3 @@
+[submodule "emotionJs/emotion_js"]
+	path = emotionJs/emotion_js
+	url = ./emotionJs/emotion_js/
