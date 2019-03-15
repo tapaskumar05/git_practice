@@ -16,8 +16,6 @@ const client = new ApolloClient({
   uri: '/graphql'
 });
 
-// To do run multiple server on single server
-
 class App extends Component {
   render() {
     return (
