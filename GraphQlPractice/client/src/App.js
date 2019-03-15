@@ -21,7 +21,6 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <div className="App">
-          <h2>Book List</h2>
           <div className="book-card">
             <BookList />
             <AddBook />

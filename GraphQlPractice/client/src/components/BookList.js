@@ -13,7 +13,7 @@ class BookList extends React.Component {
     displayBooks () {
         const data = this.props.data;
         if (data.loading) {
-            return <div>Loading Books...</div>;
+            return <div class="lds-ripple"><div></div><div></div></div>;
         }
         return data.books.map((book) => {
             return <li key={book.id} onClick={(e) => {this.setState({ selected: book.id })}}>{book.name}</li>
@@ -22,10 +22,14 @@ class BookList extends React.Component {
     render () {
         return (
             <div className="book-list">
-                <ul>
+                <div className="main-heading">Book List</div>
+                <ul className="total-books">
                     {this.displayBooks()}
                 </ul>
-                <BookDetails bookId={this.state.selected} />
+                { this.state.selected
+                    ? <BookDetails bookId={this.state.selected} loading={this.props.data.loading} />
+                    : null
+                }
             </div>
         );
     }

@@ -1,17 +1,24 @@
 import React from 'react';
 import { graphql } from 'react-apollo';
 import { getBookQuery } from '../queries/queries';
+import { loadavg } from 'os';
 
 class BookDetails extends React.Component {
+    constructor (props) {
+        super(props);
+        this.state = {
+            openBookDetailsSlider: false
+        }
+    }
     displayBookDetails () {
-        const { book } = this.props.data;
-        if (book) {
+        const { book, loading } = this.props.data;
+        if (book && !loading) {
             return (
                 <div>
-                    <h2>{book.name}</h2>
-                    <p>{book.genre}</p>
-                    <p>{book.author.name}</p>
-                    <p>All Books by this author:</p>
+                    <div className="sub-heading">Book: {book.name}</div>
+                    <p>Genre: {book.genre}</p>
+                    <p>Author: {book.author.name}</p>
+                    <p className="all-books">All Books by this author:</p>
                     <ul className="other-books">
                         {
                             book.author.books.map(item => {
@@ -22,12 +29,37 @@ class BookDetails extends React.Component {
                 </div>
             );
         }
-        return <div>No Book Selected</div>;
+        return <div class="lds-ripple"><div></div><div></div></div>;
+    }
+    componentDidMount () {
+        if (this.props.bookId) {
+            setTimeout(() => {
+                this.setState({
+                    openBookDetailsSlider: true
+                })
+            });
+        }
+    }
+    componentWillReceiveProps (nextProps) {
+        if (nextProps.bookId) {
+            setTimeout(() => {
+                this.setState({
+                    openBookDetailsSlider: true
+                })
+            });
+        }
+    }
+    closeSlider = () => {
+        this.setState({
+            openBookDetailsSlider: false
+        })
     }
     render () {
+        const style = { transform: this.state.openBookDetailsSlider ? 'translateX(0)' : 'translateX(100%)' };
         return (
-            <div className="book-details">
-                <h3>Book Details</h3>
+            <div className="book-details" style={style}>
+                <i className="material-icons close-icon" onClick={this.closeSlider}>close</i>
+                <div className="main-heading">Book Details</div>
                 {this.displayBookDetails()}
             </div>
         );

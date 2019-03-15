@@ -1,3 +1,6 @@
 Just a Git Practice File... 
 
 Nothing more....
+
+
+git config --global push.default current
