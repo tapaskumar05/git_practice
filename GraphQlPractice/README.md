@@ -12,7 +12,7 @@ go to server folder and run
 
 // to run both node and react
 
-React + Node Running from a Single Server
+React + Node Running from a Single Server 
 
 "scripts": {
     "start": "node app.js",
