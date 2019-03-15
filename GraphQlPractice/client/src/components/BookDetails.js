@@ -27,7 +27,7 @@ class BookDetails extends React.Component {
     render () {
         return (
             <div className="book-details">
-                <p>Book Details</p>
+                <h3>Book Details</h3>
                 {this.displayBookDetails()}
             </div>
         );
