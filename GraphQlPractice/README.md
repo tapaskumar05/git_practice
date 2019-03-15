@@ -3,8 +3,14 @@ Graphql Practice...
 GraphQl With Apollo....
 
 go to server folder and run
----> npm run client-install // to install react dependencies
---->  npm run dev // to run both node and react
+
+---> npm run client-install
+
+// to install react dependencies
+
+--->  npm run dev
+
+// to run both node and react
 
 React + Node Running from a Single Server
 
