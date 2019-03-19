@@ -49,6 +49,7 @@ code {
   flex: 1;
   flex-direction: column;
   position: relative;
+  height: 100vh;
 }
 
 .book-details {

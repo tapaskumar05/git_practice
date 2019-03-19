@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'react-apollo';
 import { getBookQuery } from '../queries/queries';
-import { loadavg } from 'os';
 
 class BookDetails extends React.Component {
     constructor (props) {
@@ -29,7 +28,7 @@ class BookDetails extends React.Component {
                 </div>
             );
         }
-        return <div class="lds-ripple"><div></div><div></div></div>;
+        return <div className="lds-ripple"><div></div><div></div></div>;
     }
     componentDidMount () {
         if (this.props.bookId) {
@@ -52,6 +51,8 @@ class BookDetails extends React.Component {
     closeSlider = () => {
         this.setState({
             openBookDetailsSlider: false
+        }, () => {
+            this.props.resetSelected();
         })
     }
     render () {

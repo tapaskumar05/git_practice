@@ -10,13 +10,23 @@ class BookList extends React.Component {
             selected: null
         }
     }
+    selectBook = (id) => {
+        this.setState({
+            selected: id
+        });
+    }
     displayBooks () {
         const data = this.props.data;
         if (data.loading) {
-            return <div class="lds-ripple"><div></div><div></div></div>;
+            return <div className="lds-ripple"><div></div><div></div></div>;
         }
         return data.books.map((book) => {
-            return <li key={book.id} onClick={(e) => {this.setState({ selected: book.id })}}>{book.name}</li>
+            return <li key={book.id} onClick={() => this.selectBook(book.id)}>{book.name}</li>
+        });
+    }
+    resetSelected = () => {
+        this.setState({
+            selected: null
         });
     }
     render () {
@@ -27,7 +37,11 @@ class BookList extends React.Component {
                     {this.displayBooks()}
                 </ul>
                 { this.state.selected
-                    ? <BookDetails bookId={this.state.selected} loading={this.props.data.loading} />
+                    ? <BookDetails 
+                        bookId={this.state.selected}
+                        loading={this.props.data.loading}
+                        resetSelected={this.resetSelected} 
+                       />
                     : null
                 }
             </div>
