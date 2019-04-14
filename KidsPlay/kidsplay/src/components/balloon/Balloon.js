@@ -1,16 +1,25 @@
 import React from 'react';
 import { Balloon, BalloonRef, TopC, LeftC } from './style';
+import { randomBetweenRange } from '../../utils/utilsFunctions';
 
 export default (props) => {
-    let baloonColor;
+    let color = 'red',
+        text = '';
     if (props) {
-        baloonColor = props.color ? props.color : 'red';
+        color = props.color && props.color;
+        text = props.children || '';
     }
+    const left = randomBetweenRange(0, 70);
+    const propsToSend = {
+        color,
+        left
+    };
     return (
-        <Balloon color={baloonColor}>
+        <Balloon {...propsToSend}>
             <BalloonRef />
             <TopC />
             <LeftC />
+            {text}
         </Balloon>
     )
 };

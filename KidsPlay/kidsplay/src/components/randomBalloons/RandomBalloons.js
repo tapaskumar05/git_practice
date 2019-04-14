@@ -1,12 +1,12 @@
 import React from 'react';
 import Balloon from '../balloon/Balloon';
-import { random } from '../../utils/utilsFunctions';
-import { colors, alphanumeric } from '../../utils/utilsConstants';
+import { random, randomColor } from '../../utils/utilsFunctions';
+import { alphanumeric } from '../../utils/utilsConstants';
 
 export default () => {
     const balloons = [];
-    for (let i=0; i<6; i++) {
-        const color = random(colors);
+    for (let i=0; i<10; i++) {
+        const color = randomColor();
         const alphanumber = random(alphanumeric);
         balloons.push(<Balloon color={color}>{alphanumber}</Balloon>);
     }
