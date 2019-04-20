@@ -1,18 +1,11 @@
 import styled from '@emotion/styled';
+import {Link} from 'react-router-dom';
 
 const StartScreenBody = styled.div`
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: cyan;
-    display: flex;
-    flex-direction: column;
+    
 `;
 
-const StartButton = styled.button`
+const StartButton = styled(Link)`
     display: flex;
     justify-content: space-evenly;
     padding: 0 48px 0 40px;;
