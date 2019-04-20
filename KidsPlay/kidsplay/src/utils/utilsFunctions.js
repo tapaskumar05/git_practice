@@ -11,15 +11,30 @@ const randomBetweenRange = (min, max) => {
 };
 
 const randomColor = () => {
-    var x = Math.floor(Math.random() * 256);
-    var y = Math.floor(Math.random() * 256);
-    var z = Math.floor(Math.random() * 256);
-    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-		return bgColor;
-}
+    const x = Math.floor(Math.random() * 256);
+    const y = Math.floor(Math.random() * 256);
+    const z = Math.floor(Math.random() * 256);
+    const bgColor = "rgb(" + x + "," + y + "," + z + ")";
+	return bgColor;
+};
+
+const randomColorWithOpacity = () => {
+    const x = Math.floor(Math.random() * 256);
+    const y = Math.floor(Math.random() * 256);
+    const z = Math.floor(Math.random() * 256);
+    // const opacity = Math.floor(Math.random() * 10) /10;
+    const opacity = 0.2;
+    const color = "rgb(" + x + "," + y + "," + z + ")";
+    const colorWithOpacity = "rgba(" + x + "," + y + "," + z + "," + opacity + ")";
+	return {
+        color,
+        colorWithOpacity
+    };
+};
 
 export {
     random,
     randomBetweenRange,
-    randomColor
+    randomColor,
+    randomColorWithOpacity
 };
