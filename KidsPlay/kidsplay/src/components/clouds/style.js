@@ -58,7 +58,7 @@ const Cloud = styled.div`
 
 const animateCloud = keyframes`
     0% {
-        margin-left: -1000px;
+        margin-left: -500px;
     }
     100% {
         margin-left: 100%;

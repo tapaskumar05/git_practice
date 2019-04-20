@@ -27,15 +27,6 @@ class App extends Component {
                 />
               )
           })}
-          {/* <Link to="/">Home</Link>
-          <Link to="/about">About</Link> */}
-          {/* <Route path="/about" exact strict render = {
-            () => {
-              return (<h1> Kids Play About Us Page </h1>);
-            }
-          } /> */}
-          {/* <Route path="/user/:username" exact strict component={User} />
-          <button onClick={this.buttonClicked}>Click Me</button> */}
         </div>
       </Router>
     );

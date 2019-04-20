@@ -1,0 +1,14 @@
+{
+  "name": "progressivewebapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "html/index.html",
+  "scripts": {
+    "start": "http-server -c-1 -p 8081"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
+}

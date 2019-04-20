@@ -1,6 +1,7 @@
 import StartScreen from './views/startScreen/StartScreen';
 import Menu from './views/menu/Menu';
 import CharacterList from './views/characterList/CharacterList';
+import Color from './views/color/Color';
 
 export default [
     {
@@ -17,5 +18,10 @@ export default [
         path: '/characters',
         component: CharacterList,
         id: 'characters'
+    },
+    {
+        path: '/color',
+        component: Color,
+        id: 'colors'
     }
 ]

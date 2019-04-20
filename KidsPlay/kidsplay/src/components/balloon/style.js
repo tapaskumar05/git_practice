@@ -3,7 +3,7 @@ import { keyframes } from '@emotion/core';
 
 const animateBalloons = keyframes`
     0% {
-        bottom: -100%;
+        bottom: -1%;
     }
     100% {
         bottom: 100%;
@@ -15,7 +15,15 @@ const Balloon = styled.div`
     width: 104px;
     border-radius: 80% 80% 80% 80%;
     position: relative;
-    margin: 0 5px;
+    margin: 100px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+    color: #fff;
+    ${( { left } ) => `
+        left: ${left}%;
+    `}
     -webkit-animation: ${animateBalloons} 35s linear infinite;
 	-moz-animation: ${animateBalloons} 35s linear infinite;
 	animation: ${animateBalloons} 35s linear infinite;
@@ -34,6 +42,16 @@ const Balloon = styled.div`
         ${( { color } ) => `
             border-bottom: 10px solid ${color};
         `}
+    }
+    :after {
+        display: inline-block;
+        top: 129px;
+        position: absolute;
+        height: 250px;
+        width: 1px;
+        margin: 0 auto;
+        content: "";
+        background: rgba(0,0,0,0.2);
     }
 `;
 
