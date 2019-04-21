@@ -22,7 +22,13 @@ class App extends Component {
                   path = {route.path}
                   exact 
                   strict 
-                  component = {route.component}
+                  component = {props => {
+                    return (
+                      <div className="route-holder">
+                        <route.component {...props} />
+                      </div>
+                    );
+                  }}
                   key = {route.id}
                 />
               )

@@ -1,16 +1,18 @@
 import React from 'react';
 import ItemList from '../../components/itemList/ItemList';
 import { alphabets } from "../../utils/utilsConstants";
-import {ListContainer} from './style';
 
-const CharacterList = () => {
+const CharacterList = ({history}) => {
     return (
-        <ListContainer className="route-holder">
-            <ItemList
-                itemList={alphabets.split('')}
-            />
-        </ListContainer>
-    )
+        <ItemList
+            itemList = {alphabets.split('').map(alphabet => ({
+                body: alphabet,
+                key: alphabet,
+                href: `/characters/${alphabet}`
+            }))}
+            onClick = {url => history.push(url)}
+        />
+    );
 }
 
 export default CharacterList;

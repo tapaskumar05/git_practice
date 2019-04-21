@@ -1,16 +1,19 @@
 import React from 'react';
 import { ListContainer, ListItem } from './style';
 
-const ItemList = ({itemList, itemsInARow}) => {
+const ItemList = ({className, itemList, itemsInARow, onClick}) => {
     return (
-        <ListContainer>
+        <ListContainer
+            className = {className}
+        >
             {itemList.map(item => {
                 return (
                     <ListItem 
                         itemsInARow = {itemsInARow} 
-                        key = {item}
+                        key = {item.key}
+                        onClick = {() => onClick(item.href)}
                     >
-                        {item}
+                        {item.body}
                     </ListItem>
                 );
             })}
@@ -19,6 +22,7 @@ const ItemList = ({itemList, itemsInARow}) => {
 }
 
 ItemList.defaultProps = {
+    className: '',
     itemsInARow: 5
 }
 

@@ -1,11 +1,10 @@
 import styled from '@emotion/styled';
-import {Link} from 'react-router-dom';
 
 const StartScreenBody = styled.div`
     
 `;
 
-const StartButton = styled(Link)`
+const StartButton = styled.div`
     display: flex;
     justify-content: space-evenly;
     padding: 0 48px 0 40px;;

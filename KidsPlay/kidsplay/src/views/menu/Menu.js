@@ -1,7 +1,7 @@
 import React from 'react';
 import { TabContainer, TabButton } from './style';
 
-const Menu = () => {
+const Menu = ({history}) => {
 
     const tabs = [
         {
@@ -18,14 +18,17 @@ const Menu = () => {
 
     const tabsHtml = tabs.map(tab => {
         return (
-            <TabButton key={tab.key}>
+            <TabButton 
+                key = {tab.key}
+                onClick = {() => history.push(tab.route)}
+            >
                 {tab.text}
             </TabButton>
         )
     });
 
     return (
-        <TabContainer className="route-holder">
+        <TabContainer>
             {tabsHtml}
         </TabContainer>
     );
