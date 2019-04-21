@@ -30,8 +30,8 @@ const bubbleAnimation = keyframes`
 
 const Bubble = styled.div`
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 100%;
     position: relative;
     ${({ color }) => `
@@ -39,6 +39,7 @@ const Bubble = styled.div`
     `}
     -webkit-animation: ${bubbleAnimation} 2s ease-out infinite;
     animation: ${bubbleAnimation} 2s ease-out infinite;
+    margin: 10px;
     :before {
         content: "";
         position: absolute;

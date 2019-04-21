@@ -1,7 +1,15 @@
 import styled from '@emotion/styled';
 
 const StartScreenBody = styled.div`
-    
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgb(28, 146, 210), rgb(242, 252, 254));
+    display: flex;
+    flex-direction: column;
 `;
 
 const StartButton = styled.div`

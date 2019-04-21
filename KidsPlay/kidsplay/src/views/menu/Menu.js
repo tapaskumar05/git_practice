@@ -1,5 +1,7 @@
 import React from 'react';
-import { TabContainer, TabButton } from './style';
+import { TabContainer, TabButton, TabTextStyle } from './style';
+import { randomColorWithOpacity } from '../../utils/utilsFunctions';
+import Landscape from '../../svgImages/landscape/Landscape';
 
 const Menu = ({history}) => {
 
@@ -13,6 +15,11 @@ const Menu = ({history}) => {
             key: 'numbers',
             text: '1-9',
             route: '/numbers'
+        },
+        {
+            key: 'color',
+            text: 'Colors',
+            route: '/color'
         }
     ];
 
@@ -21,6 +28,8 @@ const Menu = ({history}) => {
             <TabButton 
                 key = {tab.key}
                 onClick = {() => history.push(tab.route)}
+                color = {color}
+                colorWithOpacity = {colorWithOpacity}
             >
                 {tab.text}
             </TabButton>
@@ -29,6 +38,7 @@ const Menu = ({history}) => {
 
     return (
         <TabContainer>
+            <Landscape />
             {tabsHtml}
         </TabContainer>
     );

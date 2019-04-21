@@ -7,6 +7,7 @@ const BubbleContainer = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 40px;
+    overflow: auto;
 `;
 
 export {
