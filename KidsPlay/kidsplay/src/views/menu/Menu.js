@@ -24,6 +24,7 @@ const Menu = ({history}) => {
     ];
 
     const tabsHtml = tabs.map(tab => {
+        const { color, colorWithOpacity } = randomColorWithOpacity();
         return (
             <TabButton 
                 key = {tab.key}
