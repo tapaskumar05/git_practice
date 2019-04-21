@@ -10,36 +10,43 @@ export default [
     {
         path: '/',
         component: StartScreen,
-        id: 'startScreen'
+        id: 'startScreen',
+        className: 'start-screen'
     },
     {
         path: '/menu',
         component: Menu,
-        id: 'menu'
+        id: 'menu',
+        className: 'menu'
     },
     {
         path: '/characters/:character',
         component: AlphabetsViewer,
-        id: 'alphabetViewer'
+        id: 'alphabetViewer',
+        className: 'alphabet-viewer'
     },
     {
         path: '/characters',
         component: CharacterList,
-        id: 'characters'
+        id: 'characters',
+        className: 'characters'
     },
     {
         path: '/numbers/:number',
         component: NumbersViewer,
-        id: 'numberViewer'
+        id: 'numberViewer',
+        className: 'number-viewer'
     },
     {
         path: '/numbers',
         component: NumberList,
-        id: 'numbers'
+        id: 'numbers',
+        className: 'numbers'
     },
     {
         path: '/color',
         component: Color,
-        id: 'colors'
+        id: 'colors',
+        className: 'colors'
     }
 ]

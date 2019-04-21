@@ -24,7 +24,7 @@ class App extends Component {
                   strict 
                   component = {props => {
                     return (
-                      <div className="route-holder">
+                      <div className={`route-holder ${route.className || ''}`}>
                         <route.component {...props} />
                       </div>
                     );

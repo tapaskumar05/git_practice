@@ -6,8 +6,10 @@ const NumbersViewer = () => {
     return (
         <ItemsViewer 
             list = {numbers.split('').map(number => ({
-                body: number,
                 key: number,
+                left: number,
+                //image: example.image,
+                footerText: 'one'
             }))}
         />
     );

@@ -11,6 +11,9 @@ a,
 span {
   font-family: var(--app-font-family);
 }
+div {
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -26,6 +29,13 @@ span {
   flex-direction: column;
   overflow: auto;
 }
+
+/* route specific styling for route-holder*/
+.route-holder.alphabet-viewer,
+.route-holder.number-viewer {
+  justify-content: center;
+}
+
 /* .route-holder::after {
   position: fixed;
   top: 0;

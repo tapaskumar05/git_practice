@@ -17,7 +17,7 @@ const StartButton = styled.div`
     justify-content: space-evenly;
     padding: 0 48px 0 40px;;
     align-items: center;
-    width: 250px;
+    width: 338px;
     height: 70px;
     font-size: 30px;
     position: absolute;

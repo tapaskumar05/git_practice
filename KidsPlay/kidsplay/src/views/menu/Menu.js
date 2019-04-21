@@ -2,26 +2,9 @@ import React from 'react';
 import { TabContainer, TabButton, TabTextStyle } from './style';
 import { randomColorWithOpacity } from '../../utils/utilsFunctions';
 import Landscape from '../../svgImages/landscape/Landscape';
+import tabs from '../../json/menu';
 
 const Menu = ({history}) => {
-
-    const tabs = [
-        {
-            key: 'characters',
-            text: 'A-Z',
-            route: '/characters'
-        },
-        {
-            key: 'numbers',
-            text: '1-9',
-            route: '/numbers'
-        },
-        {
-            key: 'color',
-            text: 'Colors',
-            route: '/color'
-        }
-    ];
 
     const tabsHtml = tabs.map(tab => {
         const { color, colorWithOpacity } = randomColorWithOpacity();
