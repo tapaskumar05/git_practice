@@ -3,7 +3,7 @@ import CommonSlider from '../commonSlider/CommonSlider';
 import SingleItemViewer from '../singleItemViewer/SingleItemViewer';
 import SliderStyling from './SliderStyling';
 
-const ItemsViewer = ({list}) => {
+const ItemsViewer = ({ list, currentIndex = 0 }) => {
     const listHtml = list.map(item => {
         return (
             <SingleItemViewer 
@@ -18,7 +18,8 @@ const ItemsViewer = ({list}) => {
             <SliderStyling />
             <CommonSlider
                 settings = {{
-                    centerMode: true
+                    centerMode: true,
+                    initialSlide: currentIndex
                 }}
             >
                 {listHtml}

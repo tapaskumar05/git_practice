@@ -6,8 +6,10 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'mobx-react';
 import KidsPlayStore from './stores/KidsPlayStore';
 
+const location = window.location;
+
 const Root = (
-    <Provider KidsPlayStore={KidsPlayStore}>
+    <Provider KidsPlayStore={KidsPlayStore} location={location}>
         <App />
     </Provider>
 );
