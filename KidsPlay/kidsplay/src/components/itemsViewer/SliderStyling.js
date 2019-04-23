@@ -22,6 +22,9 @@ const SliderStyling = () => {
         .slick-disabled {
         	display: none !important;
         }
+        .slick-active .viewer-item {
+            transform: scale(1);
+        }
     `;
     return (
         <style

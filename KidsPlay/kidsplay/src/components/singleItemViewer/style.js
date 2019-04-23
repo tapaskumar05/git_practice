@@ -7,7 +7,12 @@ const Item = styled.div`
     justify-content: center;
     min-height: 500px;
     margin: 5px;
-    border 1px solid #333;
+    background: #fff;
+    border: none;
+    box-shadow: 0px 0px 4px 3px #b3b3b370;
+    border-radius: 10px;
+    transform: scale(0.9);
+    transition: 0.5s ease-out;
 `;
 
 const Header = styled.div`
