@@ -3,13 +3,10 @@ import './App.css';
 import { playBtnClickSound } from './helpers/playAudio';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import routes from './routes';
-import { inject, observer } from '../../../MobX/my_shopping_cart/node_modules/mobx-react';
+import { inject, observer } from 'mobx-react';
 @inject('KidsPlayStore')
 @observer
 class App extends Component {
-  constructor (props) {
-    super (props);
-  }
   buttonClicked = () => {
     playBtnClickSound();
   }

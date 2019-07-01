@@ -4,7 +4,6 @@ import { numbers } from "../../utils/utilsConstants";
 
 const NumberList = (props) => {
     const {history} = props;
-    console.log('Number List', props);
     return (
         <ItemList
             itemList = {numbers.split('').map(number => ({
@@ -12,8 +11,9 @@ const NumberList = (props) => {
                 key: number,
                 href: `/numbers/${number}`
             }))}
-            itemsInARow = {2}
+            itemsInARow = {3}
             onClick = {url => history.push(url)}
+            title = 'Numbers'
         />
     );
 }

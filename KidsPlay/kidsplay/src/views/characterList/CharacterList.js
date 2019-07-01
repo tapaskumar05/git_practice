@@ -11,6 +11,7 @@ const CharacterList = ({history}) => {
                 href: `/characters/${alphabet}`
             }))}
             onClick = {url => history.push(url)}
+            title = 'Alphabets'
         />
     );
 }

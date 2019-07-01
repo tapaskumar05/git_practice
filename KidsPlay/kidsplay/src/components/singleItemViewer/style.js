@@ -18,13 +18,17 @@ const Item = styled.div`
 const Header = styled.div`
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	padding: 15px;
     margin-bottom: 15px;
 `;
 
 const HeaderDataPoint = styled.div`
-width: 50px;`;
+    width: 50px;
+    &:nth-child(2n) {
+        margin-left: 50%;
+    }
+`;
 
 const Image = styled.img`
     display: block;

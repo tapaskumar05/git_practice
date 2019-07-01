@@ -4,14 +4,12 @@ import SingleItemViewer from '../singleItemViewer/SingleItemViewer';
 import SliderStyling from './SliderStyling';
 
 const ItemsViewer = ({ list, currentIndex = 0 }) => {
-    const listHtml = list.map(item => {
-        return (
-            <SingleItemViewer 
-                item = {item}
-                key = {item.key}
-            />
-        );
-    });
+    const listHtml = list.map(item => (
+        <SingleItemViewer 
+            item = {item}
+            key = {item.key}
+        />
+    ));
 
     return (
         <div className="items-viewer">

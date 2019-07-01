@@ -32,9 +32,28 @@ const randomColorWithOpacity = () => {
     };
 };
 
+const getColorArr = (rgb='') => {
+    return rgb.substring(5, rgb.length-1).replace(/ /g, '').split(',');
+}
+
+const contrastColor = (color, array=false) => {
+    if(!color) {
+        return 'rgba(255, 255, 255)';
+    }
+    const arr = getColorArr(color);
+    const contrast = [];
+    contrast[0] = 255 - Number(arr[0]);
+    contrast[1] = 255 - Number(arr[1]);
+    contrast[2] = 255 - Number(arr[2]);
+    return array ? contrast : `rgba(${contrast[0]}, ${contrast[1]}, ${contrast[2]})`;
+}
+
+
+
 export {
     random,
     randomBetweenRange,
     randomColor,
-    randomColorWithOpacity
+    randomColorWithOpacity,
+    contrastColor
 };

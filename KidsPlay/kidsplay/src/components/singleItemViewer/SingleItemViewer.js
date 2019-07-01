@@ -11,13 +11,18 @@ const SingleItemViewer = ({item}) => {
                 <HeaderDataPoint>
                     {item.left}
                 </HeaderDataPoint>
-                <HeaderDataPoint>
-                    {item.right}
-                </HeaderDataPoint>
+                {item.right ? (
+                    <HeaderDataPoint>
+                        {item.right}
+                    </HeaderDataPoint>
+                ) : null}
             </Header>
-            <Image 
-                src={item.image}
-            />
+            {item.image && (
+                <Image 
+                    src={item.image}
+                />
+            )}
+            {item.html || null}
             <Footer>
                 {item.footerText}
             </Footer>
