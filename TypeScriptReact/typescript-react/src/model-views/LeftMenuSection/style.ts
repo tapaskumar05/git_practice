@@ -17,6 +17,9 @@ export const itemStyle = (selected: boolean) => css`
     cursor: pointer;
     transition: 0.3s ease-in-out;
     border-radius: 4px;
+    :hover {
+        transform: scale(1.04);
+    }
     ${selected ? `
         box-shadow: 0px 0px 4px 3px inset #000000e0;
         color: black;
